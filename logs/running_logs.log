@@ -41,3 +41,134 @@ x==========x]
 [2024-01-04 03:07:22,846: INFO: common: yaml file: params.yaml loaded successfully]
 [2024-01-04 03:07:22,847: INFO: common: created directory at: artifacts]
 [2024-01-04 03:07:22,848: INFO: common: created directory at: artifacts\training]
+[2024-01-05 03:36:48,096: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 03:36:48,105: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 03:36:48,107: INFO: common: created directory at: artifacts]
+[2024-01-05 03:36:48,110: INFO: common: created directory at: artifacts\training]
+[2024-01-05 03:45:25,531: INFO: main: *******************]
+[2024-01-05 03:45:25,531: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-05 03:45:25,534: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 03:45:25,535: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 03:45:25,536: INFO: common: created directory at: artifacts]
+[2024-01-05 03:45:25,537: INFO: common: created directory at: artifacts\training]
+[2024-01-05 03:45:26,662: ERROR: main: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.]
+Traceback (most recent call last):
+  File "C:\Users\kunjd\OneDrive\Desktop\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+    model_trainer.main()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 19, in main
+    training.get_base_model()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 16, in get_base_model
+    self.model = tf.keras.models.load_model(
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\optimizers\optimizer_experimental\optimizer.py", line 115, in _process_kwargs
+    raise TypeError(
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+[2024-01-05 03:53:08,406: INFO: main: *******************]
+[2024-01-05 03:53:08,406: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-05 03:53:08,408: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 03:53:08,410: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 03:53:08,411: INFO: common: created directory at: artifacts]
+[2024-01-05 03:53:08,411: INFO: common: created directory at: artifacts\training]
+[2024-01-05 03:53:10,694: ERROR: main: You must compile your model before training/testing. Use `model.compile(optimizer, loss)`.]
+Traceback (most recent call last):
+  File "C:\Users\kunjd\OneDrive\Desktop\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+    model_trainer.main()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+    training.train()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 76, in train
+    self.model.fit(
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 3618, in _assert_compile_was_called
+    raise RuntimeError(
+RuntimeError: You must compile your model before training/testing. Use `model.compile(optimizer, loss)`.
+[2024-01-05 03:58:04,084: INFO: main: *******************]
+[2024-01-05 03:58:04,084: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-05 03:58:04,087: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 03:58:04,089: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 03:58:04,090: INFO: common: created directory at: artifacts]
+[2024-01-05 03:58:04,090: INFO: common: created directory at: artifacts\training]
+[2024-01-05 03:58:05,529: ERROR: main: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.]
+Traceback (most recent call last):
+  File "C:\Users\kunjd\OneDrive\Desktop\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+    model_trainer.main()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 19, in main
+    training.get_base_model()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 16, in get_base_model
+    self.model = tf.keras.models.load_model(
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\optimizers\optimizer_experimental\optimizer.py", line 115, in _process_kwargs
+    raise TypeError(
+TypeError: weight_decay is not a valid argument, kwargs should be empty  for `optimizer_experimental.Optimizer`.
+[2024-01-05 03:58:26,401: INFO: main: *******************]
+[2024-01-05 03:58:26,402: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-05 03:58:26,404: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 03:58:26,405: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 03:58:26,406: INFO: common: created directory at: artifacts]
+[2024-01-05 03:58:26,406: INFO: common: created directory at: artifacts\training]
+[2024-01-05 03:58:28,358: ERROR: main: You must compile your model before training/testing. Use `model.compile(optimizer, loss)`.]
+Traceback (most recent call last):
+  File "C:\Users\kunjd\OneDrive\Desktop\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+    model_trainer.main()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+    training.train()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 76, in train
+    self.model.fit(
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 3618, in _assert_compile_was_called
+    raise RuntimeError(
+RuntimeError: You must compile your model before training/testing. Use `model.compile(optimizer, loss)`.
+[2024-01-05 03:58:52,498: INFO: main: *******************]
+[2024-01-05 03:58:52,498: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-05 03:58:52,500: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 03:58:52,501: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 03:58:52,502: INFO: common: created directory at: artifacts]
+[2024-01-05 03:58:52,504: INFO: common: created directory at: artifacts\training]
+[2024-01-05 03:58:55,609: ERROR: main: You must compile your model before training/testing. Use `model.compile(optimizer, loss)`.]
+Traceback (most recent call last):
+  File "C:\Users\kunjd\OneDrive\Desktop\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+    model_trainer.main()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+    training.train()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 76, in train
+    self.model.fit(
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 3618, in _assert_compile_was_called
+    raise RuntimeError(
+RuntimeError: You must compile your model before training/testing. Use `model.compile(optimizer, loss)`.
+[2024-01-05 18:22:37,128: INFO: main: *******************]
+[2024-01-05 18:22:37,129: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-05 18:22:37,131: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 18:22:37,135: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 18:22:37,136: INFO: common: created directory at: artifacts]
+[2024-01-05 18:22:37,137: INFO: common: created directory at: artifacts\training]
+[2024-01-05 18:22:40,955: ERROR: main: You must compile your model before training/testing. Use `model.compile(optimizer, loss)`.]
+Traceback (most recent call last):
+  File "C:\Users\kunjd\OneDrive\Desktop\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+    model_trainer.main()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+    training.train()
+  File "c:\users\kunjd\onedrive\desktop\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 76, in train
+    self.model.fit(
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 3618, in _assert_compile_was_called
+    raise RuntimeError(
+RuntimeError: You must compile your model before training/testing. Use `model.compile(optimizer, loss)`.
+[2024-01-05 18:23:24,558: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 18:23:24,563: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 18:23:24,565: INFO: common: created directory at: artifacts]
+[2024-01-05 18:23:24,568: INFO: common: created directory at: artifacts\training]
+[2024-01-05 18:32:55,360: INFO: main: *******************]
+[2024-01-05 18:32:55,360: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-05 18:32:55,363: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-05 18:32:55,366: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-05 18:32:55,367: INFO: common: created directory at: artifacts]
+[2024-01-05 18:32:55,368: INFO: common: created directory at: artifacts\training]
+[2024-01-05 19:05:26,381: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
