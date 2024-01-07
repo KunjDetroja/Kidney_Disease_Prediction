@@ -172,3 +172,203 @@ RuntimeError: You must compile your model before training/testing. Use `model.co
 [2024-01-05 19:05:26,381: INFO: main: >>>>>> stage Training completed <<<<<<
 
 x==========x]
+[2024-01-07 10:48:45,383: INFO: main: *******************]
+[2024-01-07 10:48:45,384: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-07 10:48:45,387: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 10:48:45,389: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 10:48:45,389: INFO: common: created directory at: artifacts]
+[2024-01-07 10:48:45,391: INFO: common: created directory at: artifacts\training]
+[2024-01-07 10:48:45,396: ERROR: main: No file or directory found at artifacts\prepare_base_model\base_model_updated.h5]
+Traceback (most recent call last):
+  File "C:\Kunj\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+    model_trainer.main()
+  File "c:\kunj\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 19, in main
+    training.get_base_model()
+  File "c:\kunj\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 16, in get_base_model
+    self.model = tf.keras.models.load_model(
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\saving\save.py", line 226, in load_model
+    raise IOError(
+OSError: No file or directory found at artifacts\prepare_base_model\base_model_updated.h5
+[2024-01-07 10:49:31,667: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-01-07 10:49:31,670: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 10:49:31,671: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 10:49:31,672: INFO: common: created directory at: artifacts]
+[2024-01-07 10:49:31,672: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-01-07 10:49:31,673: INFO: data_ingestion: Downloading data from https://drive.google.com/file/d/1irC6CPtyyBNsoNdnolT7gm08jBbeb0ou/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-07 11:00:13,619: INFO: data_ingestion: Downloaded data from https://drive.google.com/file/d/1irC6CPtyyBNsoNdnolT7gm08jBbeb0ou/view?usp=sharing into file artifacts/data_ingestion/data.zip]
+[2024-01-07 11:02:02,742: ERROR: main: [Errno 13] Permission denied: 'artifacts\\data_ingestion\\Kidney-Report\\Cyst\\Cyst- (3195).jpg']
+Traceback (most recent call last):
+  File "C:\Kunj\AIML_Project\Kidney_Disease_Prediction\main.py", line 14, in <module>
+    data_ingestion.main()
+  File "C:\Kunj\AIML_Project\Kidney_Disease_Prediction\src\cnnClassifier\pipeline\stage_01_data_ingestion.py", line 17, in main
+    data_ingestion.extract_zip_file()
+  File "C:\Kunj\AIML_Project\Kidney_Disease_Prediction\src\cnnClassifier\components\data_ingestion.py", line 46, in extract_zip_file
+    zip_ref.extractall(unzip_path)
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\zipfile.py", line 1647, in extractall
+    self._extract_member(zipinfo, path, pwd)
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\zipfile.py", line 1701, in _extract_member
+    open(targetpath, "wb") as target:
+PermissionError: [Errno 13] Permission denied: 'artifacts\\data_ingestion\\Kidney-Report\\Cyst\\Cyst- (3195).jpg'
+[2024-01-07 11:25:34,063: INFO: main: *******************]
+[2024-01-07 11:25:34,063: INFO: main: >>>>>> stage Prepare base model started <<<<<<]
+[2024-01-07 11:25:34,065: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 11:25:34,070: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 11:25:34,072: INFO: common: created directory at: artifacts]
+[2024-01-07 11:25:34,073: INFO: common: created directory at: artifacts/prepare_base_model]
+[2024-01-07 11:25:36,691: WARNING: saving_utils: Compiled the loaded model, but the compiled metrics have yet to be built. `model.compile_metrics` will be empty until you train or evaluate the model.]
+[2024-01-07 11:25:37,663: INFO: main: >>>>>> stage Prepare base model completed <<<<<<
+
+x==========x]
+[2024-01-07 11:25:37,664: INFO: main: *******************]
+[2024-01-07 11:25:37,664: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-07 11:25:37,667: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 11:25:37,669: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 11:25:37,670: INFO: common: created directory at: artifacts]
+[2024-01-07 11:25:37,671: INFO: common: created directory at: artifacts\training]
+[2024-01-07 11:26:02,519: ERROR: main: Graph execution error:
+
+Detected at node 'model/block1_conv2/Relu' defined at (most recent call last):
+    File "C:\Kunj\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+      model_trainer.main()
+    File "c:\kunj\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+      training.train()
+    File "c:\kunj\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 81, in train
+      self.model.fit(
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1564, in fit
+      tmp_logs = self.train_function(iterator)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1160, in train_function
+      return step_function(self, iterator)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1146, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1135, in run_step
+      outputs = model.train_step(data)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 993, in train_step
+      y_pred = self(x, training=True)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 557, in __call__
+      return super().__call__(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\base_layer.py", line 1097, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\functional.py", line 510, in call
+      return self._run_internal_graph(inputs, training=training, mask=mask)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\functional.py", line 667, in _run_internal_graph
+      outputs = node.layer(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\base_layer.py", line 1097, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\layers\convolutional\base_conv.py", line 314, in call
+      return self.activation(outputs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\activations.py", line 317, in relu
+      return backend.relu(
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\backend.py", line 5366, in relu
+      x = tf.nn.relu(x)
+Node: 'model/block1_conv2/Relu'
+OOM when allocating tensor with shape[32,64,224,224] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node model/block1_conv2/Relu}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_1842]]
+Traceback (most recent call last):
+  File "C:\Kunj\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+    model_trainer.main()
+  File "c:\kunj\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+    training.train()
+  File "c:\kunj\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 81, in train
+    self.model.fit(
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 70, in error_handler
+    raise e.with_traceback(filtered_tb) from None
+  File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\tensorflow\python\eager\execute.py", line 54, in quick_execute
+    tensors = pywrap_tfe.TFE_Py_Execute(ctx._handle, device_name, op_name,
+tensorflow.python.framework.errors_impl.ResourceExhaustedError: Graph execution error:
+
+Detected at node 'model/block1_conv2/Relu' defined at (most recent call last):
+    File "C:\Kunj\AIML_Project\Kidney_Disease_Prediction\main.py", line 42, in <module>
+      model_trainer.main()
+    File "c:\kunj\aiml_project\kidney_disease_prediction\src\cnnClassifier\pipeline\stage_03_model_training.py", line 21, in main
+      training.train()
+    File "c:\kunj\aiml_project\kidney_disease_prediction\src\cnnClassifier\components\model_training.py", line 81, in train
+      self.model.fit(
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1564, in fit
+      tmp_logs = self.train_function(iterator)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1160, in train_function
+      return step_function(self, iterator)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1146, in step_function
+      outputs = model.distribute_strategy.run(run_step, args=(data,))
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 1135, in run_step
+      outputs = model.train_step(data)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 993, in train_step
+      y_pred = self(x, training=True)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\training.py", line 557, in __call__
+      return super().__call__(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\base_layer.py", line 1097, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\functional.py", line 510, in call
+      return self._run_internal_graph(inputs, training=training, mask=mask)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\functional.py", line 667, in _run_internal_graph
+      outputs = node.layer(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 65, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\engine\base_layer.py", line 1097, in __call__
+      outputs = call_fn(inputs, *args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\utils\traceback_utils.py", line 96, in error_handler
+      return fn(*args, **kwargs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\layers\convolutional\base_conv.py", line 314, in call
+      return self.activation(outputs)
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\activations.py", line 317, in relu
+      return backend.relu(
+    File "C:\Users\kunjd\Anaconda3\envs\kidney\lib\site-packages\keras\backend.py", line 5366, in relu
+      x = tf.nn.relu(x)
+Node: 'model/block1_conv2/Relu'
+OOM when allocating tensor with shape[32,64,224,224] and type float on /job:localhost/replica:0/task:0/device:GPU:0 by allocator GPU_0_bfc
+	 [[{{node model/block1_conv2/Relu}}]]
+Hint: If you want to see a list of allocated tensors when OOM happens, add report_tensor_allocations_upon_oom to RunOptions for current allocation info. This isn't available when running in Eager mode.
+ [Op:__inference_train_function_1842]
+[2024-01-07 11:50:17,959: INFO: main: *******************]
+[2024-01-07 11:50:17,959: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-07 11:50:17,961: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 11:50:17,964: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 11:50:17,965: INFO: common: created directory at: artifacts]
+[2024-01-07 11:50:17,965: INFO: common: created directory at: artifacts\training]
+[2024-01-07 11:51:29,343: INFO: main: *******************]
+[2024-01-07 11:51:29,343: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-07 11:51:29,345: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 11:51:29,348: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 11:51:29,349: INFO: common: created directory at: artifacts]
+[2024-01-07 11:51:29,350: INFO: common: created directory at: artifacts\training]
+[2024-01-07 11:54:46,593: INFO: main: *******************]
+[2024-01-07 11:54:46,593: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-07 11:54:46,595: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 11:54:46,596: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 11:54:46,597: INFO: common: created directory at: artifacts]
+[2024-01-07 11:54:46,597: INFO: common: created directory at: artifacts\training]
+[2024-01-07 12:34:23,797: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
+[2024-01-07 12:38:50,850: INFO: main: *******************]
+[2024-01-07 12:38:50,850: INFO: main: >>>>>> stage Training started <<<<<<]
+[2024-01-07 12:38:50,853: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 12:38:50,856: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 12:38:50,856: INFO: common: created directory at: artifacts]
+[2024-01-07 12:38:50,857: INFO: common: created directory at: artifacts\training]
+[2024-01-07 15:18:38,506: INFO: main: >>>>>> stage Training completed <<<<<<
+
+x==========x]
