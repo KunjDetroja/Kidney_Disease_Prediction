@@ -372,3 +372,22 @@ x==========x]
 [2024-01-07 15:18:38,506: INFO: main: >>>>>> stage Training completed <<<<<<
 
 x==========x]
+[2024-01-07 16:23:10,468: INFO: main: *******************]
+[2024-01-07 16:23:10,470: INFO: main: >>>>>> stage Evaluation stage started <<<<<<]
+[2024-01-07 16:23:10,472: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 16:23:10,475: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 16:23:10,477: INFO: common: created directory at: artifacts]
+[2024-01-07 16:24:01,698: INFO: common: json file saved at: scores.json]
+[2024-01-07 16:24:01,706: INFO: common: json file saved at: scores.json]
+[2024-01-07 16:24:01,712: INFO: main: >>>>>> stage Evaluation stage completed <<<<<<
+
+x==========x]
+[2024-01-07 16:50:27,596: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 16:50:27,602: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 16:50:27,606: INFO: common: created directory at: artifacts]
+[2024-01-07 18:12:09,774: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 18:12:09,780: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 18:12:09,782: INFO: common: created directory at: artifacts]
+[2024-01-07 18:14:39,311: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-01-07 18:14:39,317: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-01-07 18:14:39,320: INFO: common: created directory at: artifacts]
